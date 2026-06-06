@@ -21,7 +21,6 @@ jobs:
         run: |
           cordova create app com.fiora.app فيورا
           cp فيورا-final.html app/www/index.html
-          cp logo_512x512.png app/res/icon.png
           cp logo_512x512.png app/www/logo_512x512.png
       - name: Add Android platform
         working-directory: app
