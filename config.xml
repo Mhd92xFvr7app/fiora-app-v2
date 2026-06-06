@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.fiora.app" version="1.0.0"
+  xmlns="http://www.w3.org/ns/widgets"
+  xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>فيورا</name>
+  <description>فيورا - شارك، تفاعل، وابقى على اطلاع</description>
+  <author email="dev@fiora.app" href="http://fiora.app">فيورا</author>
+  <content src="index.html" />
+  <icon src="logo_512x512.png" />
+  <platform name="android">
+    <icon src="logo_512x512.png" density="xxxhdpi" />
+  </platform>
+  <access origin="*" />
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+</widget>
