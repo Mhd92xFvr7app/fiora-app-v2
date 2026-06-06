@@ -21,10 +21,16 @@ jobs:
         run: |
           cordova create app com.fiora.app فيورا
           cp فيورا-final.html app/www/index.html
-          cp logo_512x512.png app/logo_512x512.png
+          cp logo_512x512.png app/res/icon.png
+          cp logo_512x512.png app/www/logo_512x512.png
       - name: Add Android platform
         working-directory: app
         run: cordova platform add android
+      - name: Copy icon to Android
+        run: |
+          mkdir -p app/platforms/android/app/src/main/res/mipmap-xxxhdpi
+          cp logo_512x512.png app/platforms/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+          cp logo_512x512.png app/platforms/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
       - name: Build APK
         working-directory: app
         run: cordova build android
